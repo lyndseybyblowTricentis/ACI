@@ -1,92 +1,3149 @@
 {
-  "constants": [
-    {
-      "id": "constant-1",
-      "name": "ManagerURL",
-      "hidden": false,
-      "value": ""
+  "5dc50e4f69bc54266a0e47a6a4471cae" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "constant-2",
-      "name": "QTEST_TOKEN",
-      "hidden": false,
-      "value": ""
+    "items" : [ {
+      "uid" : "7365a1fbdb58d06d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/7365a1fbdb58d06d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946514553,
+        "stop" : 1606946522866,
+        "duration" : 8313
+      }
+    }, {
+      "uid" : "ef6490f583e3aa03",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/ef6490f583e3aa03",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941485414,
+        "stop" : 1606941493701,
+        "duration" : 8287
+      }
+    }, {
+      "uid" : "575dd7ca03dc7ae1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/575dd7ca03dc7ae1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940155256,
+        "stop" : 1606940163469,
+        "duration" : 8213
+      }
+    } ]
+  },
+  "838f033a174e5759a758940ed9110ad3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
     },
-    {
-      "id": "constant-3",
-      "name": "TeamsWebHook",
-      "hidden": false,
-      "value": ""
-    }
-  ],
-  "actions": [
-    {
-      "id": "action-1",
-      "name": "MSTeamsMessage",
-      "description": null,
-      "code": "/**\n * trigger name: ChatOpsEvent\n * call source: other Pulse Actions via emitEvent()\n * payload example:\n *   {\n *     \"message\": \"insert message contents here\"\n *   }\n * constants example:\n *  ChatOpsWebhook: 84d46c6a-d39d-11e9-bb65-2a2ae2dbcce4\n * outputs:\n * - the \"message\" object in the payload will be sent to a configured Microsoft Teams webhook\n * prerequisites: configured webhook connector for Microsoft Teams\n * external documentation: https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/connectors/connectors-using\n */\n\nexports.handler = function ({ event: body, constants, triggers }, context, callback) {\n    var str = body;\n    //console.log(str.message);\n\n    var request = require('request');\n    var teams_webhook = constants.TeamsWebHook;\n\n    //console.log('About to request MS Teams webhook: ', teams_webhook);\n\n    request({\n        uri: teams_webhook,\n        method: 'POST',\n        json: { \"text\": str.message }\n    }, function (error, response, body) { }\n    );\n}"
+    "items" : [ {
+      "uid" : "d7f2800957ef0cca",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/d7f2800957ef0cca",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006689443,
+        "stop" : 1607006698453,
+        "duration" : 9010
+      }
+    }, {
+      "uid" : "fa84b22eb02f82a0",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/fa84b22eb02f82a0",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945816521,
+        "stop" : 1606945825076,
+        "duration" : 8555
+      }
+    }, {
+      "uid" : "7ace56507290e389",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/7ace56507290e389",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940724938,
+        "stop" : 1606940733653,
+        "duration" : 8715
+      }
+    }, {
+      "uid" : "b6cedacd458ae9e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/b6cedacd458ae9e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939462968,
+        "stop" : 1606939472070,
+        "duration" : 9102
+      }
+    } ]
+  },
+  "1ea026b8ec8b17a95bab8688ed89903" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "action-2",
-      "name": "UpdateQTestWithResults",
-      "description": null,
-      "code": "const request = require('request');\nconst { Webhooks } = require('@qasymphony/pulse-sdk');\nconst ScenarioSdk = require('@qasymphony/scenario-sdk');\n\nconst Features = {\n    getIssueLinkByFeatureName(qtestToken, scenarioProjectId, name) {\n        return new ScenarioSdk.Features({ qtestToken, scenarioProjectId }).getFeatures(`\"${name}\"`);\n    }\n};\n\nexports.handler = function ({ event: body, constants, triggers }, context, callback) {\n    function emitEvent(name, payload) {\n        let t = triggers.find(t => t.name === name);\n        return t && new Webhooks().invoke(t, payload);\n    }\n\n    // Specific to pulse actions\n    var payload = body;\n\n    var testLogs = payload.logs;\n    var cycleId = payload.testcycle;\n    var projectId = payload.projectId;\n    var requiresDecode = payload.requiresDecode;\n\n    if(requiresDecode == 'true') {\n        testLogs = JSON.parse(testLogs);\n    }\n\n    var scenarioCount = 0;\n    var scenarioList = \"\";\n\n    var standardHeaders = {\n        'Content-Type': 'application/json',\n        'Authorization': `bearer ${constants.QTEST_TOKEN}`\n    }\n\n    var createLogsAndTCs = function () {\n        var opts = {\n            url: \"http://\" + constants.ManagerURL + \"/api/v3/projects/\" + projectId + \"/auto-test-logs?type=automation\",\n            json: true,\n            headers: standardHeaders,\n            body: {\n                test_cycle: cycleId,\n                test_logs: testLogs\n            }\n        };\n\n        return request.post(opts, function (err, response, resbody) {\n\n            if (err) {\n                Promise.reject(err);\n            }\n            else {\n                emitEvent('ChatOpsEvent', { message: resbody });\n\n                if (response.body.type == \"AUTOMATION_TEST_LOG\") {\n                    Promise.resolve(\"Uploaded results successfully\");\n                }\n                else {\n                    emitEvent('ChatOpsEvent', { message: \"Wrong type\" });\n                    Promise.reject(\"Unable to upload test results\");\n                }\n            }\n        });\n    };\n\n    createLogsAndTCs()\n        .on('response', function () {\n            console.log(\"About to call Link Requirements Rule\")\n            emitEvent('<INSERT NAME OF LINK SCENARIO REQUIREMENTS RULE HERE>', payload);\n        })\n        .on('error', function (err) {\n            emitEvent('ChatOpsEvent', { message: err });\n        })\n}"
+    "items" : [ {
+      "uid" : "35a6bc5af9d73f52",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/35a6bc5af9d73f52",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946457634,
+        "stop" : 1606946466207,
+        "duration" : 8573
+      }
+    }, {
+      "uid" : "1a6c108249920209",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/1a6c108249920209",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941395631,
+        "stop" : 1606941404438,
+        "duration" : 8807
+      }
+    }, {
+      "uid" : "e55d0f80f2ed2996",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e55d0f80f2ed2996",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940099729,
+        "stop" : 1606940108154,
+        "duration" : 8425
+      }
+    } ]
+  },
+  "10685a79ad6a53f743a13424f99ba6b4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "action-3",
-      "name": "FormatJavaCucumberJSON",
-      "description": null,
-      "code": "/**\n * call source: delivery script from CI Tool (Jenkins, Bamboo, TeamCity, CircleCI, etc), Launch, locally executed\n *              see 'delivery' subdirectory in this repository\n * payload example:\n * {\n *   properties: 'example value'\n *   arrayOfItems: [ { <properties and example values> } ]\n * }\n * constants:\n * - SCENARIO_PROJECT_ID: 84d46c6a-d39d-11e9-bb65-2a2ae2dbcce4\n * - QTEST_TOKEN: 84d46c6a-d39d-11e9-bb65-2a2ae2dbcce4\n * outputs:\n * - The unformatted items in the payload will be formatted into qTest test case\n * - The test cases then will be added to qTest project\n * - The unformatted result will be sent to the trigger \"TriggerName\"\n * - The ChatOps channel (if there is any) will notificate the result or error\n */\n\nconst { Webhooks } = require('@qasymphony/pulse-sdk');\n\nexports.handler = function ({ event: body, constants, triggers }, context, callback) {\n    function emitEvent(name, payload) {\n        let t = triggers.find(t => t.name === name);\n        return t && new Webhooks().invoke(t, payload);\n    }\n\n    // Payload to be passed in: json style cucumber for java test results\n\n    /////// Pulse version\n    var payload = body;\n    var projectId = payload.projectId;\n    var cycleId = payload.testcycle;\n\n    let testResults = JSON.parse(Buffer.from(payload.result, 'base64').toString('ascii'));\n\n    var testLogs = [];\n    //console.log(\"TEST RESULTS: \" + testResults);\n\n    //emitEvent('ChatOpsEvent', { TESTRESULTS: testResults });\n\n    testResults.forEach(function (feature) {\n        var featureName = feature.name;\n        feature.elements.forEach(function (testCase) {\n\n            if (!testCase.name)\n                testCase.name = \"Unnamed\";\n\n            TCStatus = \"passed\";\n\n            var reportingLog = {\n                exe_start_date: new Date(), // TODO These could be passed in\n                exe_end_date: new Date(),\n                module_names: [\n                    featureName\n                ],\n                name: testCase.name,\n                automation_content: feature.uri + \"#\" + testCase.name\n            };\n\n            var testStepLogs = [];\n            order = 0;\n            stepNames = [];\n            attachments = [];\n\n            testCase.steps.forEach(function (step) {\n                stepNames.push(step.name);\n\n                var status = step.result.status;\n                var actual = step.name;\n\n                if (TCStatus == \"passed\" && status == \"skipped\") {\n                    TCStatus = \"skipped\";\n                }\n                if (status == \"failed\") {\n                    TCStatus = \"failed\";\n                    actual = step.result.error_message;\n                }\n                if (status == \"undefined\") {\n                    TCStatus = \"incomplete\";\n                    status = \"incomplete\";                    \n                    emitEvent('ChatOpsEvent', { message: \"Step result not found: \" + step.name + \"; marking as incomplete.\" });\n                }\n\n                // Are there an attachment for this step?\n                if (\"embeddings\" in step) {\n                    console.log(\"Has attachment\");\n\n                    attCount = 0;\n                    step.embeddings.forEach(function (att) {\n                        attCount++;\n                        var attachment = {\n                            name: step.name + \" Attachment \" + attCount,\n                            \"content_type\": att.mime_type,\n                            data: att.data\n                        };\n                        console.log(\"Attachment: \" + attachment.name)\n\n                        attachments.push(attachment);\n                    });\n                }\n\n                var expected = step.keyword + \" \" + step.name;\n\n                if (\"location\" in step.match) {\n                    expected = step.match.location;\n                }\n\n                var stepLog = {\n                    order: order,\n                    description: step.keyword + ' ' + step.name,\n                    expected_result: step.name,\n                    actual_result: actual,\n                    status: status\n                };\n\n                testStepLogs.push(stepLog);\n                order++;\n            });\n\n            reportingLog.attachments = attachments;\n            reportingLog.description = stepNames.join(\"<br/>\");\n            reportingLog.status = TCStatus;\n            reportingLog.test_step_logs = testStepLogs;\n            reportingLog.featureName = featureName;\n            testLogs.push(reportingLog);\n        });\n    });\n\n    var formattedResults = {\n        \"projectId\": projectId,\n        \"testcycle\": cycleId,\n        \"logs\": testLogs\n    };\n\n    emitEvent('UpdateQTestWithFormattedResults', formattedResults);\n\n}"
+    "items" : [ {
+      "uid" : "8c9831c107e6412f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/8c9831c107e6412f",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946531988,
+        "stop" : 1606946540749,
+        "duration" : 8761
+      }
+    }, {
+      "uid" : "5ede8a91465572c1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5ede8a91465572c1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941387128,
+        "stop" : 1606941396847,
+        "duration" : 9719
+      }
+    }, {
+      "uid" : "9e158494938ec84",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/9e158494938ec84",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940153441,
+        "stop" : 1606940164044,
+        "duration" : 10603
+      }
+    } ]
+  },
+  "634c900479280fb61753c1200e10b972" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "action-4",
-      "name": "FormatJUnitXML",
-      "description": null,
-      "code": "const PulseSdk = require('@qasymphony/pulse-sdk');\nconst request = require('request');\nconst xml2js = require('xml2js');\nconst { Webhooks } = require('@qasymphony/pulse-sdk');\n\nexports.handler = function ({ event: body, constants, triggers }, context, callback) {\n    function emitEvent(name, payload) {\n        let t = triggers.find(t => t.name === name);\n        return t && new Webhooks().invoke(t, payload);\n    }\n                \n        var payload = body;\n        var projectId = payload.projectId;\n        var cycleId = payload.testcycle;\n        var testLogs = [];\n\n        let testResults = Buffer.from(payload.result, 'base64').toString('ascii');\n\n        //console.log(testResults);\n\n        var parseString = require('xml2js').parseString;\n        var startTime = '';\n        var endTime = '';\n        var lastEndTime = 0;\n\n        parseString(testResults, {\n            preserveChildrenOrder: true,\n            explicitArray: false,\n            explicitChildren: false,\n            emptyTag: \"...\"\n        }, function (err, result) {\n            if (err) {\n                emitEvent('ChatOpsEvent', { Error: \"Unexpected Error Parsing XML Document: \" + err }); \n                console.log(err);\n            } else {              \n                if (result.testsuites) {                    \n                    if (result.testsuites.testsuite) {\n                        var testsuites = Array.isArray(result.testsuites['testsuite']) ? result.testsuites['testsuite'] : [result.testsuites['testsuite']];\n                        testsuites.forEach(function(testsuite) {\n                            lastEndTime = 0;\n                            suiteName = testsuite.$.name;\n                            console.log('Suite Name: ' + suiteName)\n                            if (testsuite.testcase) {\n                                var testcases = Array.isArray(testsuite.testcase) ? testsuite.testcase : [testsuite.testcase];\n                                testcases.forEach(function(testcase) {\n                                    var classArray = [];\n                                    classArray = testcase.$.name.replace('=>', ':').split(':');\n                                    var depth = classArray.length;\n                                    var className = classArray[(depth - 1)];\n                                    var moduleNames = [];\n                                    var moduleCount = 0;\n                                    classArray.forEach(function(folder) {\n                                        if(moduleCount < (depth - 1)) {\n                                            moduleNames.push(folder.trim());\n                                            moduleCount++;\n                                        }\n                                    })\n                                    if (moduleNames.length == 0) {\n                                        moduleNames.push(suiteName);\n                                    }\n                                    console.log('Case Name: ' + className)\n                                    var classStatus = 'passed';\n                                    if (lastEndTime == 0) {\n                                        startTime = new Date(Date.parse(testsuite.$.timestamp)).toISOString();\n                                    } else {\n                                        startTime = lastEndTime;\n                                    }\n                                    interim = new Date(Date.parse(startTime)).getSeconds() + parseFloat(testcase.$.time);\n                                    endTime = new Date(Date.parse(startTime)).setSeconds(interim);\n                                    endTime = new Date(endTime).toISOString();\n\n                                    var note = '';\n                                    var stack = '';\n                                    var testFailure = Array.isArray(testcase.failure) ? testcase.failure : [testcase.failure];\n                                    testFailure.forEach(function(failure) {\n                                        if (failure) {\n                                            console.log(failure.$.type)\n                                            note = failure.$.type + ': ' + failure.$.message;\n                                            console.log(failure._)\n                                            stack = failure._;\n                                            classStatus = 'failed';\n                                        }\n                                    });\n\n                                    var testError = Array.isArray(testcase.error) ? testcase.error : [testcase.error];\n                                    testError.forEach(function(error) {\n                                        if (error) {\n                                            console.log(error.$.message)\n                                            note = error.$.message;\n                                            classStatus = 'failed';\n                                        }\n                                    });\n\n                                    var testSkipped = Array.isArray(testcase.skipped) ? testcase.skipped : [testcase.skipped];\n                                    testSkipped.forEach(function(skipped) {\n                                        if (skipped) {\n                                            classStatus = 'skipped';\n                                        }\n                                    });\n\n                                    console.log(classStatus);\n\n                                    var testLog = {\n                                        status: classStatus,\n                                        name: className,\n                                        attachments: [],\n                                        note: note,\n                                        exe_start_date: startTime,\n                                        exe_end_date: endTime,\n                                        automation_content: htmlEntities(className),\n                                        module_names: moduleNames\n                                    };\n\n                                    if (stack !== '') {\n                                        testLog.attachments.push({\n                                            name: `${className}.txt`,\n                                            data: Buffer.from(stack).toString(\"base64\"),\n                                            content_type: \"text/plain\"\n                                        });\n                                    }\n                                    //testLog.attachments.push(payload.consoleOutput[0]);\n                                    testLogs.push(testLog);\n                                    lastEndTime = endTime;\n                                });\n                            } else {                                \n                                console.log('Test Suite has no Test Cases, skipping.');\n                            }\n                        });\n                    } else {\n                        console.log('Test Suites collection is empty, skipping.');\n                    }\n                } else {\n                    console.log('Test Suites collection doesn\\'t exist, checking for singular test suite.');\n                    var testsuite = result.testsuite;\n\n                    lastEndTime = 0;\n                    suiteName = testsuite.$.name;\n                    console.log('Suite Name: ' + suiteName);\n                    if (testsuite.testcase) {\n                        var testcases = Array.isArray(testsuite.testcase) ? testsuite.testcase : [testsuite.testcase];\n                        testcases.forEach(function(testcase) {\n                            var classArray = [];\n                            classArray = testcase.$.name.replace('=>', ':').split(':');\n                            var depth = classArray.length;\n                            var className = classArray[(depth - 1)];\n                            var moduleNames = [];\n                            var moduleCount = 0;\n                            classArray.forEach(function(folder) {\n                                if(moduleCount < (depth - 1)) {\n                                    moduleNames.push(folder.trim());\n                                    moduleCount++;\n                                }\n                            })\n                            if(moduleNames.length == 0) {\n                                moduleNames.push(suiteName);\n                            }\n                            console.log('Case Name: ' + className)\n                            var classStatus = 'passed';\n                            if(lastEndTime == 0) {\n                                startTime = new Date(Date.parse(testsuite.$.timestamp)).toISOString();\n                            } else {\n                                startTime = lastEndTime;\n                            }\n                            interim = new Date(Date.parse(startTime)).getSeconds() + parseFloat(testcase.$.time);\n                            endTime = new Date(Date.parse(startTime)).setSeconds(interim);\n                            endTime = new Date(endTime).toISOString();\n\n                            var note = '';\n                            var stack = '';\n                            \n                            var testFailure = Array.isArray(testcase.failure) ? testcase.failure : [testcase.failure];\n                            testFailure.forEach(function(failure) {\n                                if (failure) {\n                                    console.log(failure.$.type)\n                                    note = failure.$.type + ': ' + failure.$.message;\n                                    console.log(failure._)\n                                    stack = failure._;\n                                    classStatus = 'failed';\n                                }\n                            });\n\n                            var testError = Array.isArray(testcase.error) ? testcase.error : [testcase.error];\n                            testError.forEach(function(error) {\n                                if (error) {\n                                    console.log(error.$.message)\n                                    note = error.$.message;\n                                    classStatus = 'failed';\n                                }\n                            });\n\n                            var testSkipped = Array.isArray(testcase.skipped) ? testcase.skipped : [testcase.skipped];\n                            testSkipped.forEach(function(skipped) {\n                                if (skipped) {\n                                    classStatus = 'skipped';\n                                }\n                            });\n\n                            console.log(classStatus);\n\n                            var testLog = {\n                                status: classStatus,\n                                name: className,\n                                attachments: [],\n                                note: note,\n                                exe_start_date: startTime,\n                                exe_end_date: endTime,\n                                automation_content: htmlEntities(className),\n                                module_names: moduleNames\n                            };\n                            if (stack !== '') {\n                            testLog.attachments.push({\n                                name: `${className}.txt`,\n                                data: Buffer.from(stack).toString(\"base64\"),\n                                content_type: \"text/plain\"\n                            });\n                            }\n                            //testLog.attachments.push(payload.consoleOutput[0]);\n                            testLogs.push(testLog);\n                            lastEndTime = endTime;\n                        });\n                    } else {\n                        console.log('Test Suite has no Test Cases, skipping.');\n                    }\n                }\n            }   \n        });\n\n        var formattedResults = {\n            \"projectId\" : projectId,\n            \"testcycle\": cycleId,\n            \"logs\" : testLogs\n        };\n\n        emitEvent('UpdateQTestWithFormattedResults', formattedResults );\n\n};\n\nfunction htmlEntities(str) {\n    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;');\n}"
-    }
-  ],
-  "triggers": [
-    {
-      "id": "trigger-1",
-      "name": "UpdateQTestWithFormattedResultsEvent"
+    "items" : [ {
+      "uid" : "44550630a0fc5e0c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/44550630a0fc5e0c",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606946068182,
+        "stop" : 1606946078144,
+        "duration" : 9962
+      }
+    }, {
+      "uid" : "1eceb3fc9521d9bb",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/1eceb3fc9521d9bb",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606940972905,
+        "stop" : 1606940983931,
+        "duration" : 11026
+      }
+    }, {
+      "uid" : "8748e676eb8d1e05",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/8748e676eb8d1e05",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606939711203,
+        "stop" : 1606939720588,
+        "duration" : 9385
+      }
+    } ]
+  },
+  "30076f54bd947fbd199e9ee87741e751" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "trigger-2",
-      "name": "UploadJavaCucumberResults"
+    "items" : [ {
+      "uid" : "f8d2c4c1ccd524ca",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/f8d2c4c1ccd524ca",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946316875,
+        "stop" : 1606946325372,
+        "duration" : 8497
+      }
+    }, {
+      "uid" : "d052aca7b88fb703",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/d052aca7b88fb703",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941252269,
+        "stop" : 1606941262264,
+        "duration" : 9995
+      }
+    }, {
+      "uid" : "c4bcc7601cd906ba",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/c4bcc7601cd906ba",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939961233,
+        "stop" : 1606939970490,
+        "duration" : 9257
+      }
+    } ]
+  },
+  "4a87e1e6ca0462fe8f384165e9817193" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "trigger-3",
-      "name": "UploadJavaJUnitResults"
+    "items" : [ {
+      "uid" : "44e0e1e464a29bc8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/44e0e1e464a29bc8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946135478,
+        "stop" : 1606946178310,
+        "duration" : 42832
+      }
+    }, {
+      "uid" : "930591f52d49173d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/930591f52d49173d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606941039625,
+        "stop" : 1606941082232,
+        "duration" : 42607
+      }
+    }, {
+      "uid" : "91e9951c5fd263db",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/91e9951c5fd263db",
+      "status" : "broken",
+      "statusDetails" : "function timed out, ensure the promise resolves within 15000 milliseconds",
+      "time" : {
+        "start" : 1606939764898,
+        "stop" : 1606939803425,
+        "duration" : 38527
+      }
+    } ]
+  },
+  "3aafc7580ceb1058ad4c09c8139d4248" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
     },
-    {
-      "id": "trigger-4",
-      "name": "ChatOpsEvent"
-    }
-  ],
-  "rules": [
-    {
-      "id": "rule-5",
-      "name": "UploadJavaJUnitResults",
-      "active": false,
-      "triggerId": "trigger-3",
-      "actionIds": ["action-4"],
-      "tags": []
+    "items" : [ {
+      "uid" : "ad78189031cf753f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/ad78189031cf753f",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006597739,
+        "stop" : 1607006606354,
+        "duration" : 8615
+      }
+    }, {
+      "uid" : "75d6edf2e025119b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/75d6edf2e025119b",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945716997,
+        "stop" : 1606945725146,
+        "duration" : 8149
+      }
+    }, {
+      "uid" : "3b8d13c6f85e74b6",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/3b8d13c6f85e74b6",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940627675,
+        "stop" : 1606940636367,
+        "duration" : 8692
+      }
+    }, {
+      "uid" : "4dafc2307d209ec3",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/4dafc2307d209ec3",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939362542,
+        "stop" : 1606939370751,
+        "duration" : 8209
+      }
+    } ]
+  },
+  "d782b95a0eb8d6de4088ce22758b4c70" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
     },
-    {
-      "id": "rule-6",
-      "name": "UploadJavaJsonResults",
-      "active": false,
-      "triggerId": "trigger-2",
-      "actionIds": ["action-3"],
-      "tags": []
+    "items" : [ {
+      "uid" : "bfe0d3d5b2083d5",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/bfe0d3d5b2083d5",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946496022,
+        "stop" : 1606946504940,
+        "duration" : 8918
+      }
+    }, {
+      "uid" : "c102a7a6bb1a1f5e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/c102a7a6bb1a1f5e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941465659,
+        "stop" : 1606941475657,
+        "duration" : 9998
+      }
+    }, {
+      "uid" : "de1226ff556b1294",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/de1226ff556b1294",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940136656,
+        "stop" : 1606940145058,
+        "duration" : 8402
+      }
+    } ]
+  },
+  "3df4bb87522ba3d65fd43f396e177ede" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
     },
-    {
-      "id": "rule-7",
-      "name": "UpdateQTestWithResults",
-      "active": false,
-      "triggerId": "trigger-1",
-      "actionIds": ["action-2"],
-      "tags": []
-    }
-  ]
+    "items" : [ {
+      "uid" : "6a4a9fcbee13abb0",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/6a4a9fcbee13abb0",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006656540,
+        "stop" : 1607006665401,
+        "duration" : 8861
+      }
+    }, {
+      "uid" : "86f4e7897eb43f81",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/86f4e7897eb43f81",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945782167,
+        "stop" : 1606945791056,
+        "duration" : 8889
+      }
+    }, {
+      "uid" : "f00e4ad63ac14dfc",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/f00e4ad63ac14dfc",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940686584,
+        "stop" : 1606940695559,
+        "duration" : 8975
+      }
+    }, {
+      "uid" : "acf06d3f30b0e4cf",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/acf06d3f30b0e4cf",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939427189,
+        "stop" : 1606939436552,
+        "duration" : 9363
+      }
+    } ]
+  },
+  "2a5b82c1cd8b79575f41e5654fd5ea5e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "e24d6a73c6e2b8f8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/e24d6a73c6e2b8f8",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006779256,
+        "stop" : 1607006788505,
+        "duration" : 9249
+      }
+    }, {
+      "uid" : "c883a8ef26789abf",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/c883a8ef26789abf",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945912678,
+        "stop" : 1606945921857,
+        "duration" : 9179
+      }
+    }, {
+      "uid" : "cbd7e09883474115",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/cbd7e09883474115",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940817940,
+        "stop" : 1606940827201,
+        "duration" : 9261
+      }
+    }, {
+      "uid" : "398a0b1d99b0ad30",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/398a0b1d99b0ad30",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939560624,
+        "stop" : 1606939572112,
+        "duration" : 11488
+      }
+    } ]
+  },
+  "39cf1efa329b10bc9cb4a0dafe752b8a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "9014e886a3baaaaf",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/9014e886a3baaaaf",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006699147,
+        "stop" : 1607006707928,
+        "duration" : 8781
+      }
+    }, {
+      "uid" : "cf51161e7bd06901",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/cf51161e7bd06901",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945825591,
+        "stop" : 1606945835383,
+        "duration" : 9792
+      }
+    }, {
+      "uid" : "5f4eca7a61b035b3",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5f4eca7a61b035b3",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940734199,
+        "stop" : 1606940742385,
+        "duration" : 8186
+      }
+    }, {
+      "uid" : "c203d36a8e98f20a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/c203d36a8e98f20a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939472758,
+        "stop" : 1606939481409,
+        "duration" : 8651
+      }
+    } ]
+  },
+  "83814fbf5860647957469104f5555256" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "c6c5f82cc24a51d4",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/c6c5f82cc24a51d4",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006789449,
+        "stop" : 1607006798692,
+        "duration" : 9243
+      }
+    }, {
+      "uid" : "5216c88482706b04",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/5216c88482706b04",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945922830,
+        "stop" : 1606945932123,
+        "duration" : 9293
+      }
+    }, {
+      "uid" : "f707595ff442fbd1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/f707595ff442fbd1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940828733,
+        "stop" : 1606940837292,
+        "duration" : 8559
+      }
+    }, {
+      "uid" : "5e030f0dfd7a35a1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/5e030f0dfd7a35a1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939573036,
+        "stop" : 1606939581939,
+        "duration" : 8903
+      }
+    } ]
+  },
+  "26ecdd46f73272a5ff8b76bb39618fc2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "5c279f2f6b528031",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/5c279f2f6b528031",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946375483,
+        "stop" : 1606946384694,
+        "duration" : 9211
+      }
+    }, {
+      "uid" : "bda892224bd7c000",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/bda892224bd7c000",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941311745,
+        "stop" : 1606941320887,
+        "duration" : 9142
+      }
+    }, {
+      "uid" : "2b7c6ffda4885bc",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/2b7c6ffda4885bc",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940018502,
+        "stop" : 1606940027671,
+        "duration" : 9169
+      }
+    } ]
+  },
+  "ab99380f73f5451d70dff9ff2a6398ed" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "76ad30fea63d5dba",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/76ad30fea63d5dba",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946365155,
+        "stop" : 1606946374388,
+        "duration" : 9233
+      }
+    }, {
+      "uid" : "c0c168eda5ebc15f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/c0c168eda5ebc15f",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941301187,
+        "stop" : 1606941310263,
+        "duration" : 9076
+      }
+    }, {
+      "uid" : "cb8831580052f95c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/cb8831580052f95c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940008873,
+        "stop" : 1606940017997,
+        "duration" : 9124
+      }
+    } ]
+  },
+  "76d9fd0119ed8e836fc77b000b320e22" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "90dcbd36b0569a04",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/90dcbd36b0569a04",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606945986591,
+        "stop" : 1606946023591,
+        "duration" : 37000
+      }
+    }, {
+      "uid" : "58cce466593960d8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/58cce466593960d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940888058,
+        "stop" : 1606940926782,
+        "duration" : 38724
+      }
+    }, {
+      "uid" : "e8a5805060b59d44",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e8a5805060b59d44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939640833,
+        "stop" : 1606939671488,
+        "duration" : 30655
+      }
+    } ]
+  },
+  "7f586f954dfde8f6b3b9e81f7f47a845" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "90e275e7c67f0641",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/90e275e7c67f0641",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946159887,
+        "stop" : 1606946211545,
+        "duration" : 51658
+      }
+    }, {
+      "uid" : "9c69cb1853ff2e69",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/9c69cb1853ff2e69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606941089770,
+        "stop" : 1606941143783,
+        "duration" : 54013
+      }
+    }, {
+      "uid" : "934da564d4ffe06b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/934da564d4ffe06b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939808851,
+        "stop" : 1606939859169,
+        "duration" : 50318
+      }
+    } ]
+  },
+  "661c720341e83f786b670b13bdacddc3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "b2f0af0cba8b60c2",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/b2f0af0cba8b60c2",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006535331,
+        "stop" : 1607006545486,
+        "duration" : 10155
+      }
+    }, {
+      "uid" : "56e586629c7ff33",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/56e586629c7ff33",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945657050,
+        "stop" : 1606945665504,
+        "duration" : 8454
+      }
+    }, {
+      "uid" : "bb8c2d800dfd67e7",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/bb8c2d800dfd67e7",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940567354,
+        "stop" : 1606940577816,
+        "duration" : 10462
+      }
+    }, {
+      "uid" : "3e412b924bbaefe4",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/3e412b924bbaefe4",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939296775,
+        "stop" : 1606939307075,
+        "duration" : 10300
+      }
+    } ]
+  },
+  "3ea0063f6ebb83feafd1627a36676db5" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "a599c97272d89db2",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/a599c97272d89db2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946023608,
+        "stop" : 1606946068181,
+        "duration" : 44573
+      }
+    }, {
+      "uid" : "c8eeeaedd80d63ff",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/c8eeeaedd80d63ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940926807,
+        "stop" : 1606940972903,
+        "duration" : 46096
+      }
+    }, {
+      "uid" : "fbf1edecf3742bc4",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/fbf1edecf3742bc4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939671522,
+        "stop" : 1606939711197,
+        "duration" : 39675
+      }
+    } ]
+  },
+  "b669a70ce1b14ca6b4aa7d561057b95" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "aadf265bcf52c583",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/aadf265bcf52c583",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946350093,
+        "stop" : 1606946358825,
+        "duration" : 8732
+      }
+    }, {
+      "uid" : "d642774e3b168766",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/d642774e3b168766",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941206406,
+        "stop" : 1606941216905,
+        "duration" : 10499
+      }
+    }, {
+      "uid" : "e7df7e1263f60e4b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e7df7e1263f60e4b",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939980168,
+        "stop" : 1606939989022,
+        "duration" : 8854
+      }
+    } ]
+  },
+  "20fa9c935174376d2e267e6511254a78" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "ff594198dc7d1567",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/ff594198dc7d1567",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946421819,
+        "stop" : 1606946430081,
+        "duration" : 8262
+      }
+    }, {
+      "uid" : "493196389082712a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/493196389082712a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941358934,
+        "stop" : 1606941367813,
+        "duration" : 8879
+      }
+    }, {
+      "uid" : "755656725500a0f6",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/755656725500a0f6",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940064403,
+        "stop" : 1606940072727,
+        "duration" : 8324
+      }
+    } ]
+  },
+  "3f9f41b280b65ec54c71f9e979e651df" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "75787c02a7245d06",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/75787c02a7245d06",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607006608391,
+        "stop" : 1607006609442,
+        "duration" : 1051
+      }
+    }, {
+      "uid" : "a1eba33611bb6f5",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/a1eba33611bb6f5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606945727982,
+        "stop" : 1606945729653,
+        "duration" : 1671
+      }
+    }, {
+      "uid" : "d87a4a56258aef8b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/d87a4a56258aef8b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940638463,
+        "stop" : 1606940639924,
+        "duration" : 1461
+      }
+    }, {
+      "uid" : "852a1e28e4599d6d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/852a1e28e4599d6d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939374318,
+        "stop" : 1606939375412,
+        "duration" : 1094
+      }
+    } ]
+  },
+  "2671e2db8a914605a9defc767826c6b7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "4e9ef86d3ac431f8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/4e9ef86d3ac431f8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946233760,
+        "stop" : 1606946301608,
+        "duration" : 67848
+      }
+    }, {
+      "uid" : "3b492c3d957f8678",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/3b492c3d957f8678",
+      "status" : "broken",
+      "statusDetails" : "function timed out, ensure the promise resolves within 15000 milliseconds",
+      "time" : {
+        "start" : 1606941122257,
+        "stop" : 1606941160570,
+        "duration" : 38313
+      }
+    }, {
+      "uid" : "88c31764559ee3ff",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/88c31764559ee3ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939865305,
+        "stop" : 1606939931657,
+        "duration" : 66352
+      }
+    } ]
+  },
+  "7c4324359c4e62ee5167b19e24cfb277" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "747e5bcae20f254",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/747e5bcae20f254",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006546354,
+        "stop" : 1607006554557,
+        "duration" : 8203
+      }
+    }, {
+      "uid" : "2827e53f492ce2a2",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/2827e53f492ce2a2",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945665987,
+        "stop" : 1606945674320,
+        "duration" : 8333
+      }
+    }, {
+      "uid" : "f1fb9b684403a2db",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/f1fb9b684403a2db",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940578317,
+        "stop" : 1606940586455,
+        "duration" : 8138
+      }
+    }, {
+      "uid" : "6cb99aed4d85208b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/6cb99aed4d85208b",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939308323,
+        "stop" : 1606939316760,
+        "duration" : 8437
+      }
+    } ]
+  },
+  "c0817e61d87435b169f3882257a9ba81" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "a0038d4be231ddcf",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/a0038d4be231ddcf",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006598649,
+        "stop" : 1607006607469,
+        "duration" : 8820
+      }
+    }, {
+      "uid" : "af45cea94d76a040",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/af45cea94d76a040",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945718188,
+        "stop" : 1606945727077,
+        "duration" : 8889
+      }
+    }, {
+      "uid" : "202ab7d1a4c89e9a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/202ab7d1a4c89e9a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940628701,
+        "stop" : 1606940637675,
+        "duration" : 8974
+      }
+    }, {
+      "uid" : "a73087a06fd263d1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/a73087a06fd263d1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939364461,
+        "stop" : 1606939373370,
+        "duration" : 8909
+      }
+    } ]
+  },
+  "25a469b4ad1d92f08edc82025d48bcf2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "afd4d8734f9be9a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/afd4d8734f9be9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946025566,
+        "stop" : 1606946061420,
+        "duration" : 35854
+      }
+    }, {
+      "uid" : "429521ac17d2b347",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/429521ac17d2b347",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940930904,
+        "stop" : 1606940976051,
+        "duration" : 45147
+      }
+    }, {
+      "uid" : "f65f9a26f4eaf02d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/f65f9a26f4eaf02d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939670052,
+        "stop" : 1606939706684,
+        "duration" : 36632
+      }
+    } ]
+  },
+  "93b900e97cf0efc16c5d5a5f47350e5a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "fed7c71d6a6366c9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/fed7c71d6a6366c9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006644034,
+        "stop" : 1607006653462,
+        "duration" : 9428
+      }
+    }, {
+      "uid" : "fbc20e3f9198b67c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/fbc20e3f9198b67c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945767126,
+        "stop" : 1606945775732,
+        "duration" : 8606
+      }
+    }, {
+      "uid" : "e224785654092a70",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/e224785654092a70",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940676652,
+        "stop" : 1606940685984,
+        "duration" : 9332
+      }
+    }, {
+      "uid" : "182b05e911d50dfd",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/182b05e911d50dfd",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939412845,
+        "stop" : 1606939421089,
+        "duration" : 8244
+      }
+    } ]
+  },
+  "96e48b806509bc0a8a4b1021a6b40a63" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "e38a2c49e1d80d25",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/e38a2c49e1d80d25",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606945996740,
+        "stop" : 1606946025545,
+        "duration" : 28805
+      }
+    }, {
+      "uid" : "f211986ca67445e5",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/f211986ca67445e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940896895,
+        "stop" : 1606940930892,
+        "duration" : 33997
+      }
+    }, {
+      "uid" : "bfe04e47d187608",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/bfe04e47d187608",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939635016,
+        "stop" : 1606939670043,
+        "duration" : 35027
+      }
+    } ]
+  },
+  "fb80a97e252429866e0e820b1da21493" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "bdd05974d0ecaeaa",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/bdd05974d0ecaeaa",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946452677,
+        "stop" : 1606946463235,
+        "duration" : 10558
+      }
+    }, {
+      "uid" : "9248b51ca8438713",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/9248b51ca8438713",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941313541,
+        "stop" : 1606941322359,
+        "duration" : 8818
+      }
+    }, {
+      "uid" : "346d0beb8697f948",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/346d0beb8697f948",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940079742,
+        "stop" : 1606940088559,
+        "duration" : 8817
+      }
+    } ]
+  },
+  "dd0bd654687eee7f55ab971802983a19" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "d7dcdb3da6151474",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/d7dcdb3da6151474",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946178333,
+        "stop" : 1606946233707,
+        "duration" : 55374
+      }
+    }, {
+      "uid" : "ed0874b0ac30b100",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/ed0874b0ac30b100",
+      "status" : "broken",
+      "statusDetails" : "function timed out, ensure the promise resolves within 15000 milliseconds",
+      "time" : {
+        "start" : 1606941082245,
+        "stop" : 1606941121306,
+        "duration" : 39061
+      }
+    }, {
+      "uid" : "c34b3eadc0954ac6",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/c34b3eadc0954ac6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939804777,
+        "stop" : 1606939865277,
+        "duration" : 60500
+      }
+    } ]
+  },
+  "759ce40ff8ce7c238ea196bcc974cc44" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "372198ff27e743c9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/372198ff27e743c9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006740933,
+        "stop" : 1607006751220,
+        "duration" : 10287
+      }
+    }, {
+      "uid" : "cd6f4dc64583d038",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/cd6f4dc64583d038",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945875251,
+        "stop" : 1606945884224,
+        "duration" : 8973
+      }
+    }, {
+      "uid" : "11246aeba19a969e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/11246aeba19a969e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940778906,
+        "stop" : 1606940787036,
+        "duration" : 8130
+      }
+    }, {
+      "uid" : "2cb50f3fcdf58825",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/2cb50f3fcdf58825",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939519391,
+        "stop" : 1606939528000,
+        "duration" : 8609
+      }
+    } ]
+  },
+  "b128cca0173d7e85990f27931d1d0cca" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "47fb2ddbbee4d0a5",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/47fb2ddbbee4d0a5",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006776967,
+        "stop" : 1607006785955,
+        "duration" : 8988
+      }
+    }, {
+      "uid" : "7ce437b725c55aa8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/7ce437b725c55aa8",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945913010,
+        "stop" : 1606945922030,
+        "duration" : 9020
+      }
+    }, {
+      "uid" : "d11fa8679e30edb9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/d11fa8679e30edb9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940815358,
+        "stop" : 1606940824028,
+        "duration" : 8670
+      }
+    }, {
+      "uid" : "a8aa7bdf2c0ce341",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/a8aa7bdf2c0ce341",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939553211,
+        "stop" : 1606939561976,
+        "duration" : 8765
+      }
+    } ]
+  },
+  "cbf50dab117908af64b864d66d4e679c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "bf54c5f1b82c89c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/bf54c5f1b82c89c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006585904,
+        "stop" : 1607006597250,
+        "duration" : 11346
+      }
+    }, {
+      "uid" : "4fc25eb29f5c3635",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/4fc25eb29f5c3635",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945706633,
+        "stop" : 1606945716497,
+        "duration" : 9864
+      }
+    }, {
+      "uid" : "919049247c86700a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/919049247c86700a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940617988,
+        "stop" : 1606940626988,
+        "duration" : 9000
+      }
+    }, {
+      "uid" : "5de2c0a6a0e02418",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/5de2c0a6a0e02418",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939352422,
+        "stop" : 1606939361548,
+        "duration" : 9126
+      }
+    } ]
+  },
+  "e2e09c714275b2a472c06e0c6e710ba7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "81ce3053bd8f6f5",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/81ce3053bd8f6f5",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006654091,
+        "stop" : 1607006662755,
+        "duration" : 8664
+      }
+    }, {
+      "uid" : "37d59ef915045898",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/37d59ef915045898",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945776405,
+        "stop" : 1606945785850,
+        "duration" : 9445
+      }
+    }, {
+      "uid" : "4aa71456c2d47f79",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/4aa71456c2d47f79",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940686654,
+        "stop" : 1606940695131,
+        "duration" : 8477
+      }
+    }, {
+      "uid" : "34968f2a7697025a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/34968f2a7697025a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939421693,
+        "stop" : 1606939430055,
+        "duration" : 8362
+      }
+    } ]
+  },
+  "2ca00fed30b3b23cbb42d261b512d5e9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "1d04f2b12e4d23c2",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/1d04f2b12e4d23c2",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946550998,
+        "stop" : 1606946560346,
+        "duration" : 9348
+      }
+    }, {
+      "uid" : "d091a37b819ee57b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/d091a37b819ee57b",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941407410,
+        "stop" : 1606941416487,
+        "duration" : 9077
+      }
+    }, {
+      "uid" : "2b650ce8bf71eba3",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/2b650ce8bf71eba3",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940174385,
+        "stop" : 1606940182976,
+        "duration" : 8591
+      }
+    } ]
+  },
+  "d39ae0e0135b3a7aa8e3814d489b93c3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "4f5cb1b4b04774b1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/4f5cb1b4b04774b1",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606946301613,
+        "stop" : 1606946310845,
+        "duration" : 9232
+      }
+    }, {
+      "uid" : "5a1aecc7a11b146b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5a1aecc7a11b146b",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606941161353,
+        "stop" : 1606941170881,
+        "duration" : 9528
+      }
+    }, {
+      "uid" : "a9a911fdccf53805",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/a9a911fdccf53805",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606939931659,
+        "stop" : 1606939941114,
+        "duration" : 9455
+      }
+    } ]
+  },
+  "bd30af686c3a1fe515751e30a598394f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "85bec7f80d80472a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/85bec7f80d80472a",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606946269513,
+        "stop" : 1606946277800,
+        "duration" : 8287
+      }
+    }, {
+      "uid" : "1cb78bb1f25c6e46",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/1cb78bb1f25c6e46",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606941205927,
+        "stop" : 1606941215018,
+        "duration" : 9091
+      }
+    }, {
+      "uid" : "980241149e780ba1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/980241149e780ba1",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606939914300,
+        "stop" : 1606939922671,
+        "duration" : 8371
+      }
+    } ]
+  },
+  "abd718246bd029934198348cbdabeeff" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "7984ec49e4857dad",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/7984ec49e4857dad",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006736403,
+        "stop" : 1607006746002,
+        "duration" : 9599
+      }
+    }, {
+      "uid" : "7b80507e220d6030",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/7b80507e220d6030",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945865349,
+        "stop" : 1606945875026,
+        "duration" : 9677
+      }
+    }, {
+      "uid" : "67de8123cfbee117",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/67de8123cfbee117",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940772534,
+        "stop" : 1606940781310,
+        "duration" : 8776
+      }
+    }, {
+      "uid" : "6fb2e0284743152c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/6fb2e0284743152c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939515101,
+        "stop" : 1606939526693,
+        "duration" : 11592
+      }
+    } ]
+  },
+  "7fd8713d1984e2167f1bea16d62fcc97" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "400e602872ea290d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/400e602872ea290d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006645098,
+        "stop" : 1607006654836,
+        "duration" : 9738
+      }
+    }, {
+      "uid" : "8425162034f525a7",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/8425162034f525a7",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945772135,
+        "stop" : 1606945781130,
+        "duration" : 8995
+      }
+    }, {
+      "uid" : "793deb57b2e9c631",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/793deb57b2e9c631",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940676863,
+        "stop" : 1606940685828,
+        "duration" : 8965
+      }
+    }, {
+      "uid" : "8d15f5810a4a0e8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/8d15f5810a4a0e8",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939417145,
+        "stop" : 1606939426373,
+        "duration" : 9228
+      }
+    } ]
+  },
+  "47e4e147a7d5d6054fdb597f778367ac" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "ccaffcb85b25169f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/ccaffcb85b25169f",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946325871,
+        "stop" : 1606946335353,
+        "duration" : 9482
+      }
+    }, {
+      "uid" : "99fff66dbd0aba5a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/99fff66dbd0aba5a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941263638,
+        "stop" : 1606941272072,
+        "duration" : 8434
+      }
+    }, {
+      "uid" : "83f3e03589e3425d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/83f3e03589e3425d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939971095,
+        "stop" : 1606939979732,
+        "duration" : 8637
+      }
+    } ]
+  },
+  "20f8b3a7f1e519e93c3e52cbdbb0224" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "8922c76a535168ac",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/8922c76a535168ac",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606946061424,
+        "stop" : 1606946069880,
+        "duration" : 8456
+      }
+    }, {
+      "uid" : "c346ece739b01f81",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/c346ece739b01f81",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606940976055,
+        "stop" : 1606940985583,
+        "duration" : 9528
+      }
+    }, {
+      "uid" : "7d17de1d1af11b4",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/7d17de1d1af11b4",
+      "status" : "broken",
+      "statusDetails" : "Cannot read property 'getText' of undefined",
+      "time" : {
+        "start" : 1606939706684,
+        "stop" : 1606939715844,
+        "duration" : 9160
+      }
+    } ]
+  },
+  "9ffe0ea84bed20264a3e8aa8591a9089" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "42783482ec9789c3",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/42783482ec9789c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607006606873,
+        "stop" : 1607006607435,
+        "duration" : 562
+      }
+    }, {
+      "uid" : "3f044fe7f7594505",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/3f044fe7f7594505",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606945725676,
+        "stop" : 1606945726215,
+        "duration" : 539
+      }
+    }, {
+      "uid" : "6f4a0962be81cb97",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/6f4a0962be81cb97",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940637039,
+        "stop" : 1606940638343,
+        "duration" : 1304
+      }
+    }, {
+      "uid" : "7094d1a8fcd9f2bc",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/7094d1a8fcd9f2bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939371448,
+        "stop" : 1606939372522,
+        "duration" : 1074
+      }
+    } ]
+  },
+  "72965cbbb864fcafee8d0e5e506a3923" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "5e4d87db9336798",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/5e4d87db9336798",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006634155,
+        "stop" : 1607006643133,
+        "duration" : 8978
+      }
+    }, {
+      "uid" : "1b28e81c64c2a1d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/1b28e81c64c2a1d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945757421,
+        "stop" : 1606945766466,
+        "duration" : 9045
+      }
+    }, {
+      "uid" : "812a93258ae4472e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/812a93258ae4472e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940666753,
+        "stop" : 1606940675931,
+        "duration" : 9178
+      }
+    }, {
+      "uid" : "e9cefa4e789f5c33",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e9cefa4e789f5c33",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939403213,
+        "stop" : 1606939412004,
+        "duration" : 8791
+      }
+    } ]
+  },
+  "c83855488db5414659ba08dbfdf7e508" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "fdf02be240a60c7c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/fdf02be240a60c7c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946126442,
+        "stop" : 1606946159869,
+        "duration" : 33427
+      }
+    }, {
+      "uid" : "3a83ad123e950def",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/3a83ad123e950def",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606941049447,
+        "stop" : 1606941089749,
+        "duration" : 40302
+      }
+    }, {
+      "uid" : "16b6a4526766119d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/16b6a4526766119d",
+      "status" : "broken",
+      "statusDetails" : "function timed out, ensure the promise resolves within 15000 milliseconds",
+      "time" : {
+        "start" : 1606939772328,
+        "stop" : 1606939807838,
+        "duration" : 35510
+      }
+    } ]
+  },
+  "3757da8def69061d53a9ce4891d5751e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "b5f1fe47f8270dcd",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/b5f1fe47f8270dcd",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946441474,
+        "stop" : 1606946450931,
+        "duration" : 9457
+      }
+    }, {
+      "uid" : "4d09d54b95a1f75e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/4d09d54b95a1f75e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941303269,
+        "stop" : 1606941312530,
+        "duration" : 9261
+      }
+    }, {
+      "uid" : "370b955f433d3001",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/370b955f433d3001",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940069274,
+        "stop" : 1606940078818,
+        "duration" : 9544
+      }
+    } ]
+  },
+  "921374df390bbbc33095d4a6b3657cfd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "8a37bfacf50faf33",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/8a37bfacf50faf33",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946307704,
+        "stop" : 1606946316217,
+        "duration" : 8513
+      }
+    }, {
+      "uid" : "39a91afa156951ba",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/39a91afa156951ba",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941242683,
+        "stop" : 1606941251532,
+        "duration" : 8849
+      }
+    }, {
+      "uid" : "91af28f3a62f7d59",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/91af28f3a62f7d59",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939951527,
+        "stop" : 1606939960658,
+        "duration" : 9131
+      }
+    } ]
+  },
+  "d1fd8fe2e3238872cd808281d888ebf6" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "92d5e2f67d802716",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/92d5e2f67d802716",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006702545,
+        "stop" : 1607006711642,
+        "duration" : 9097
+      }
+    }, {
+      "uid" : "381c29faf88f9f23",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/381c29faf88f9f23",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945828873,
+        "stop" : 1606945837541,
+        "duration" : 8668
+      }
+    }, {
+      "uid" : "f4cfd1927ef4f9fb",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/f4cfd1927ef4f9fb",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940734849,
+        "stop" : 1606940744828,
+        "duration" : 9979
+      }
+    }, {
+      "uid" : "e5378efaeac263d3",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e5378efaeac263d3",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939478223,
+        "stop" : 1606939488753,
+        "duration" : 10530
+      }
+    } ]
+  },
+  "a6a8477bbe1a3222f0c594b3ef84da55" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "3a5b2c072c1400f1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/3a5b2c072c1400f1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006799626,
+        "stop" : 1607006808418,
+        "duration" : 8792
+      }
+    }, {
+      "uid" : "38e3401bbd948e12",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/38e3401bbd948e12",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945932982,
+        "stop" : 1606945941839,
+        "duration" : 8857
+      }
+    }, {
+      "uid" : "469180b7af922a27",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/469180b7af922a27",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940838069,
+        "stop" : 1606940846641,
+        "duration" : 8572
+      }
+    }, {
+      "uid" : "cd63e73dfb28f6f1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/cd63e73dfb28f6f1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939582822,
+        "stop" : 1606939591661,
+        "duration" : 8839
+      }
+    } ]
+  },
+  "c517576940ded67b60d7dd12fc6258f9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "cdea80e9fc3d9ca1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/cdea80e9fc3d9ca1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006731781,
+        "stop" : 1607006740418,
+        "duration" : 8637
+      }
+    }, {
+      "uid" : "1e11829a624feae",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/1e11829a624feae",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945864347,
+        "stop" : 1606945874524,
+        "duration" : 10177
+      }
+    }, {
+      "uid" : "6dc0baa2fa66f2d8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/6dc0baa2fa66f2d8",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940769786,
+        "stop" : 1606940778322,
+        "duration" : 8536
+      }
+    }, {
+      "uid" : "16d3f7e6b39f8bfb",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/16d3f7e6b39f8bfb",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939508906,
+        "stop" : 1606939518576,
+        "duration" : 9670
+      }
+    } ]
+  },
+  "f930dfee94bcbb9f4ab49485d01149da" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "b65079ca0238a53c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/b65079ca0238a53c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606946211563,
+        "stop" : 1606946269511,
+        "duration" : 57948
+      }
+    }, {
+      "uid" : "47aa87bfba8692e4",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/47aa87bfba8692e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606941143795,
+        "stop" : 1606941205919,
+        "duration" : 62124
+      }
+    }, {
+      "uid" : "e5b00d4ad96d7f10",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e5b00d4ad96d7f10",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939859183,
+        "stop" : 1606939914297,
+        "duration" : 55114
+      }
+    } ]
+  },
+  "550e62a2bfb8fa58e6d54d45387f6f7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "bc4a30f8b5986c97",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/bc4a30f8b5986c97",
+      "status" : "broken",
+      "statusDetails" : "Actual: null  #####  Expected:    Message : Hoverover does not show tip",
+      "time" : {
+        "start" : 1606945969942,
+        "stop" : 1606945996098,
+        "duration" : 26156
+      }
+    }, {
+      "uid" : "f3763dc0a053b65f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/f3763dc0a053b65f",
+      "status" : "broken",
+      "statusDetails" : "Actual: null  #####  Expected:    Message : Hoverover does not show tip",
+      "time" : {
+        "start" : 1606940869276,
+        "stop" : 1606940896077,
+        "duration" : 26801
+      }
+    }, {
+      "uid" : "15bc9c1228a0e0e0",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/15bc9c1228a0e0e0",
+      "status" : "broken",
+      "statusDetails" : "Actual: null  #####  Expected:    Message : Hoverover does not show tip",
+      "time" : {
+        "start" : 1606939607391,
+        "stop" : 1606939634167,
+        "duration" : 26776
+      }
+    } ]
+  },
+  "677fe1748705d90a56800eba6b3a7813" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "40729bccd6195e75",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/40729bccd6195e75",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946340440,
+        "stop" : 1606946349237,
+        "duration" : 8797
+      }
+    }, {
+      "uid" : "e69e303bea43b12c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/e69e303bea43b12c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941196684,
+        "stop" : 1606941205530,
+        "duration" : 8846
+      }
+    }, {
+      "uid" : "b5bac6c11a4cc17c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/b5bac6c11a4cc17c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939970333,
+        "stop" : 1606939979369,
+        "duration" : 9036
+      }
+    } ]
+  },
+  "b5d8c5354de1237737d57463ac8f6e35" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "8e66ab13998e562d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/8e66ab13998e562d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946359594,
+        "stop" : 1606946368151,
+        "duration" : 8557
+      }
+    }, {
+      "uid" : "40f842faa62f45f6",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/40f842faa62f45f6",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941217714,
+        "stop" : 1606941226797,
+        "duration" : 9083
+      }
+    }, {
+      "uid" : "28d0ba017ab25280",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/28d0ba017ab25280",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939989880,
+        "stop" : 1606939998658,
+        "duration" : 8778
+      }
+    } ]
+  },
+  "173f31a0e23cece0fe3670dac26f0fcd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "8f885d1c8c3ecf92",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/8f885d1c8c3ecf92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607006568400,
+        "stop" : 1607006582065,
+        "duration" : 13665
+      }
+    }, {
+      "uid" : "56e1bff13b52b8f8",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/56e1bff13b52b8f8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606945693929,
+        "stop" : 1606945709477,
+        "duration" : 15548
+      }
+    }, {
+      "uid" : "5aa319d4640de26",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5aa319d4640de26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940601697,
+        "stop" : 1606940615111,
+        "duration" : 13414
+      }
+    }, {
+      "uid" : "56ea27c4ce70ce18",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/56ea27c4ce70ce18",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939340216,
+        "stop" : 1606939355899,
+        "duration" : 15683
+      }
+    } ]
+  },
+  "81deba0fce2d8a5b31471c8093441caf" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "9df43c5ab6711e94",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/9df43c5ab6711e94",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006634960,
+        "stop" : 1607006644191,
+        "duration" : 9231
+      }
+    }, {
+      "uid" : "3373bd293c816e49",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/3373bd293c816e49",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945760036,
+        "stop" : 1606945771300,
+        "duration" : 11264
+      }
+    }, {
+      "uid" : "5ec78493ad468be9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5ec78493ad468be9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940666740,
+        "stop" : 1606940676103,
+        "duration" : 9363
+      }
+    }, {
+      "uid" : "6e5c513d90478c84",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/6e5c513d90478c84",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939404853,
+        "stop" : 1606939416378,
+        "duration" : 11525
+      }
+    } ]
+  },
+  "7faca11ef4ea34269c3e3deb3458f9f5" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "e13f6e70cb331eb9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/e13f6e70cb331eb9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946412404,
+        "stop" : 1606946421217,
+        "duration" : 8813
+      }
+    }, {
+      "uid" : "5ccecb5b270d7709",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5ccecb5b270d7709",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941348990,
+        "stop" : 1606941358132,
+        "duration" : 9142
+      }
+    }, {
+      "uid" : "6a90322d592ff7e9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/6a90322d592ff7e9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940054387,
+        "stop" : 1606940062967,
+        "duration" : 8580
+      }
+    } ]
+  },
+  "ace1e10544296595e3663b8552e6dc81" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "c043033daaf777cd",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/c043033daaf777cd",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946505564,
+        "stop" : 1606946514021,
+        "duration" : 8457
+      }
+    }, {
+      "uid" : "2e13ef40753f82b2",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/2e13ef40753f82b2",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941476297,
+        "stop" : 1606941484870,
+        "duration" : 8573
+      }
+    }, {
+      "uid" : "1c8855b49c276ceb",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/1c8855b49c276ceb",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940145676,
+        "stop" : 1606940154765,
+        "duration" : 9089
+      }
+    } ]
+  },
+  "6a28c69b83c3408d065b7214a638799b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "754d1f262b2f701d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/754d1f262b2f701d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006746784,
+        "stop" : 1607006756041,
+        "duration" : 9257
+      }
+    }, {
+      "uid" : "c2354bbf72b69c17",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/c2354bbf72b69c17",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945875785,
+        "stop" : 1606945885253,
+        "duration" : 9468
+      }
+    }, {
+      "uid" : "5125c7b00fbc026a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/5125c7b00fbc026a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940782346,
+        "stop" : 1606940790973,
+        "duration" : 8627
+      }
+    }, {
+      "uid" : "e087d473e9eae087",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e087d473e9eae087",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939528253,
+        "stop" : 1606939536724,
+        "duration" : 8471
+      }
+    } ]
+  },
+  "d27aaa1443ca60848f0d6ec757c5cf77" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "8867eb59e3edff56",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/8867eb59e3edff56",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006535769,
+        "stop" : 1607006547765,
+        "duration" : 11996
+      }
+    }, {
+      "uid" : "6c59f1e2bd1e998e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/6c59f1e2bd1e998e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945656767,
+        "stop" : 1606945665552,
+        "duration" : 8785
+      }
+    }, {
+      "uid" : "1f330f597c434d5f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/1f330f597c434d5f",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940567573,
+        "stop" : 1606940578178,
+        "duration" : 10605
+      }
+    }, {
+      "uid" : "d9cfd61e1a43b1a1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/d9cfd61e1a43b1a1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939297265,
+        "stop" : 1606939306485,
+        "duration" : 9220
+      }
+    } ]
+  },
+  "d8fdf2ff626d68ce9fbfc39b6d578fdb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "a25837aa3067e62",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/a25837aa3067e62",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006548826,
+        "stop" : 1607006558232,
+        "duration" : 9406
+      }
+    }, {
+      "uid" : "16e96f650e776da1",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/16e96f650e776da1",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945666292,
+        "stop" : 1606945674876,
+        "duration" : 8584
+      }
+    }, {
+      "uid" : "dd0018c241924941",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/dd0018c241924941",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940578968,
+        "stop" : 1606940587422,
+        "duration" : 8454
+      }
+    }, {
+      "uid" : "62a5dd159ca9a5a7",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/62a5dd159ca9a5a7",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939307367,
+        "stop" : 1606939316217,
+        "duration" : 8850
+      }
+    } ]
+  },
+  "5b77ae8ba20b3d58f8d3d46984ada49a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "71935998801730dc",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/71935998801730dc",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946541732,
+        "stop" : 1606946550247,
+        "duration" : 8515
+      }
+    }, {
+      "uid" : "e4b96286818e47c",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/e4b96286818e47c",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941397606,
+        "stop" : 1606941406563,
+        "duration" : 8957
+      }
+    }, {
+      "uid" : "e07f263dc96ec004",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/e07f263dc96ec004",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940164848,
+        "stop" : 1606940173394,
+        "duration" : 8546
+      }
+    } ]
+  },
+  "1216ae49bb79dee68e84e99ab6cbf9e8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "d211b97033622a64",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/d211b97033622a64",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006691483,
+        "stop" : 1607006701595,
+        "duration" : 10112
+      }
+    }, {
+      "uid" : "a7aa58a3eb5d55de",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/a7aa58a3eb5d55de",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945819167,
+        "stop" : 1606945828083,
+        "duration" : 8916
+      }
+    }, {
+      "uid" : "a88b2ce6dc246a5a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/a88b2ce6dc246a5a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940724735,
+        "stop" : 1606940733916,
+        "duration" : 9181
+      }
+    }, {
+      "uid" : "839cec312d124d66",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/839cec312d124d66",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939464465,
+        "stop" : 1606939477297,
+        "duration" : 12832
+      }
+    } ]
+  },
+  "fd9494f27b7487f05d004acf4beef891" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "610be234d6382adf",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/610be234d6382adf",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946395300,
+        "stop" : 1606946405413,
+        "duration" : 10113
+      }
+    }, {
+      "uid" : "de87a23ef03d670f",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/de87a23ef03d670f",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941255770,
+        "stop" : 1606941265707,
+        "duration" : 9937
+      }
+    }, {
+      "uid" : "6965c9bed49b42b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/6965c9bed49b42b",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940026524,
+        "stop" : 1606940035801,
+        "duration" : 9277
+      }
+    } ]
+  },
+  "9dd20f8b3dc1ade390a4824cc8378f7c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "56a58c75b7cb8989",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/56a58c75b7cb8989",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006787489,
+        "stop" : 1607006796057,
+        "duration" : 8568
+      }
+    }, {
+      "uid" : "a2fbc0fd0dcdaadd",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/a2fbc0fd0dcdaadd",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945923564,
+        "stop" : 1606945932163,
+        "duration" : 8599
+      }
+    }, {
+      "uid" : "fc73f709a0a78006",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/fc73f709a0a78006",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940824577,
+        "stop" : 1606940832775,
+        "duration" : 8198
+      }
+    }, {
+      "uid" : "49e103480dc9f23a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/49e103480dc9f23a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939563083,
+        "stop" : 1606939571712,
+        "duration" : 8629
+      }
+    } ]
+  },
+  "85252898b52586f8b7b884c711e8a83a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "7054fb8cca2741ed",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/7054fb8cca2741ed",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946491766,
+        "stop" : 1606946501875,
+        "duration" : 10109
+      }
+    }, {
+      "uid" : "306c0a1b51b9e235",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/306c0a1b51b9e235",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941351228,
+        "stop" : 1606941360582,
+        "duration" : 9354
+      }
+    }, {
+      "uid" : "122b5be74c53d881",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/122b5be74c53d881",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940117387,
+        "stop" : 1606940126582,
+        "duration" : 9195
+      }
+    } ]
+  },
+  "be4231a8294a6e881eb699d330cd1023" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "167f6ad37f5a4dad",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/167f6ad37f5a4dad",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606946407101,
+        "stop" : 1606946415769,
+        "duration" : 8668
+      }
+    }, {
+      "uid" : "3f136bb124d294e9",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/3f136bb124d294e9",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606941266615,
+        "stop" : 1606941276166,
+        "duration" : 9551
+      }
+    }, {
+      "uid" : "d2f556cb551ced2a",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/d2f556cb551ced2a",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940036559,
+        "stop" : 1606940045120,
+        "duration" : 8561
+      }
+    } ]
+  },
+  "a072e7e32c027832af77bf2e57f77e1a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 2,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "cf661993e64e535b",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/cf661993e64e535b",
+      "status" : "broken",
+      "statusDetails" : "function timed out, ensure the promise resolves within 15000 milliseconds",
+      "time" : {
+        "start" : 1606945969863,
+        "stop" : 1606945985177,
+        "duration" : 15314
+      }
+    }, {
+      "uid" : "c61273004431361d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/c61273004431361d",
+      "status" : "broken",
+      "statusDetails" : "function timed out, ensure the promise resolves within 15000 milliseconds",
+      "time" : {
+        "start" : 1606940871602,
+        "stop" : 1606940886904,
+        "duration" : 15302
+      }
+    }, {
+      "uid" : "866558baa5b4bb64",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/866558baa5b4bb64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939616398,
+        "stop" : 1606939640804,
+        "duration" : 24406
+      }
+    } ]
+  },
+  "cfbf622e21f3d4b1f94e09493b529007" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "f3be30bc699df1a6",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/f3be30bc699df1a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607006568738,
+        "stop" : 1607006587694,
+        "duration" : 18956
+      }
+    }, {
+      "uid" : "6c6ebe262a7846ad",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/6c6ebe262a7846ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606945696520,
+        "stop" : 1606945711118,
+        "duration" : 14598
+      }
+    }, {
+      "uid" : "63558e66f9a47add",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/63558e66f9a47add",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606940604616,
+        "stop" : 1606940620318,
+        "duration" : 15702
+      }
+    }, {
+      "uid" : "1eaa6c4470510b09",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/1eaa6c4470510b09",
+      "status" : "passed",
+      "time" : {
+        "start" : 1606939339374,
+        "stop" : 1606939355912,
+        "duration" : 16538
+      }
+    } ]
+  },
+  "35e9e22b23e9da585c00c593595782f8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "b897b77dd4707e4e",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/b897b77dd4707e4e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006797155,
+        "stop" : 1607006805825,
+        "duration" : 8670
+      }
+    }, {
+      "uid" : "df5fe004f87e4946",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/df5fe004f87e4946",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945932759,
+        "stop" : 1606945941580,
+        "duration" : 8821
+      }
+    }, {
+      "uid" : "987ae4b9813c325d",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/987ae4b9813c325d",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940833499,
+        "stop" : 1606940841789,
+        "duration" : 8290
+      }
+    }, {
+      "uid" : "5a912e0680bef681",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/5a912e0680bef681",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939572366,
+        "stop" : 1606939581391,
+        "duration" : 9025
+      }
+    } ]
+  },
+  "302afe95473eb13800352860f0f92ce5" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "items" : [ {
+      "uid" : "9efa17e4f09ca00",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/10/allure/#testresult/9efa17e4f09ca00",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1607006588120,
+        "stop" : 1607006597249,
+        "duration" : 9129
+      }
+    }, {
+      "uid" : "21505121212a2910",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/9/allure/#testresult/21505121212a2910",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606945706328,
+        "stop" : 1606945717121,
+        "duration" : 10793
+      }
+    }, {
+      "uid" : "bbeb6b8194608fdf",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/8/allure/#testresult/bbeb6b8194608fdf",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606940618772,
+        "stop" : 1606940627682,
+        "duration" : 8910
+      }
+    }, {
+      "uid" : "7ba477df50feacb5",
+      "reportUrl" : "https://jenkins.sandboxocp.aci.awscloud/job/itweb-development/job/itweb-development-otr-ui-pipeline/7/allure/#testresult/7ba477df50feacb5",
+      "status" : "broken",
+      "statusDetails" : "element (\"//input[@id='first-name']\") still not existing after 7000ms",
+      "time" : {
+        "start" : 1606939351706,
+        "stop" : 1606939362503,
+        "duration" : 10797
+      }
+    } ]
+  }
 }
